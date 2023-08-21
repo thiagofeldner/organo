@@ -3,7 +3,7 @@ import "./time.css";
 
 import hexToRgba from 'hex-to-rgba';
 
-const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
+const Time = ({ time, colaboradores, aoDeletar, mudarCor, aoFavoritar }) => {
   return (
     colaboradores.length > 0 && (
       <section
@@ -23,6 +23,7 @@ const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
                 colaborador={colaborador}
                 corDeFundo={time.cor}
                 aoDeletar={aoDeletar}
+                aoFavoritar={aoFavoritar}
               />
             );
           })}
