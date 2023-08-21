@@ -51,7 +51,7 @@ function App() {
       nome: "THIAGO FELDNER",
       cargo: "Programador de Sistemas de Informação",
       imagem:
-        "https://github.com/thiagofeldner.png",
+        "https://media.licdn.com/dms/image/C5603AQH_jTcMKYkT6w/profile-displayphoto-shrink_100_100/0/1588773535219?e=1698278400&v=beta&t=y2PXoEaSq1PQDX6rad-SQJ7e31veJKfwMYyGGTowgd8",
       time: times[0].nome,
     },
     {
@@ -183,13 +183,17 @@ function App() {
     }));
   }
 
+  function cadastrarTime(novoTime) {
+    setTimes([ ...times, { ...novoTime, id:uuidv4() } ])
+  }
+
   return (
     <div>
       <Banner />
       <Formulario
+        cadastrarTime = {cadastrarTime}
         times={times.map((time) => time.nome)}
-        aoCadastrar={(colaborador) =>
-        setColaboradores([...colaboradores, colaborador])}
+        aoCadastrar={(colaborador) => setColaboradores([...colaboradores, colaborador])}
       />
       <section className="times">
         <h1>Minha organização</h1>
