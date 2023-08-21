@@ -9,7 +9,7 @@
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
     padding: 36px 64px;
-    
+    margin: 0 8px;
 }
 .formulario-container .formulario h2 {
     font-weight: 400;
