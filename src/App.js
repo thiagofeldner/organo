@@ -5,134 +5,64 @@ import Rodape from "./componentes/Rodape";
 import Time from "./componentes/Time";
 
 function App() {
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: "Programação",
-      corPrimaria: "#D9F7E9",
-      corSecundaria: "#57C278",
+      cor: "#57C278",
     },
     {
       nome: "Front-End",
-      corPrimaria: "#E8F8FF",
-      corSecundaria: "#82CFFA",
+      cor: "#82CFFA",
     },
     {
       nome: "Data Science",
-      corPrimaria: "#F0F8E2",
-      corSecundaria: "#A6D157",
+      cor: "#A6D157",
     },
     {
       nome: "Devops",
-      corPrimaria: "#FDE7E8",
-      corSecundaria: "#E06B69",
+      cor: "#E06B69",
     },
     {
       nome: "UX e Design",
-      corPrimaria: "#FAE9F5",
-      corSecundaria: "#DB6EBF",
+      cor: "#DB6EBF",
     },
     {
       nome: "Mobile",
-      corPrimaria: "#FFF5D9",
-      corSecundaria: "#FFBA05",
+      cor: "#FFBA05",
     },
     {
       nome: "Inovação e Gestão",
-      corPrimaria: "#FFEEDF",
-      corSecundaria: "#FF8A29",
+      cor: "#FF8A29",
     },
-  ];
+  ]);
 
   const inicial = [
     {
-      nome: "JULIANA AMOASEI",
-      cargo: "Desenvolvedora de software e instrutora",
+      nome: "THIAGO FELDNER",
+      cargo: "Programador de Sistemas de Informação",
       imagem:
-        "https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg",
+        "https://github.com/thiagofeldner.png",
       time: times[0].nome,
     },
     {
-      nome: "DANIEL ARTINE",
-      cargo: "Engenheiro de Software na Stone Age",
+      nome: "THIAGO FELDNER",
+      cargo: "Programador de Sistemas de Informação",
       imagem:
-        "https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg",
-      time: times[0].nome,
-    },
-    {
-      nome: "GUILHERME LIMA",
-      cargo: "Desenvolvedor Python e JavaScript na Alura",
-      imagem:
-        "	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg",
-      time: times[0].nome,
-    },
-    {
-      nome: "PAULO SILVEIRA",
-      cargo: "Hipster e CEO da Alura",
-      imagem:
-        "https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg",
-      time: times[0].nome,
-    },
-    {
-      nome: "JULIANA AMOASEI",
-      cargo: "Desenvolvedora de software e instrutora",
-      imagem:
-        "https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg",
+        "https://github.com/thiagofeldner.png",
       time: times[1].nome,
     },
     {
-      nome: "DANIEL ARTINE",
-      cargo: "Engenheiro de Software na Stone Age",
+      nome: "THIAGO FELDNER",
+      cargo: "Programador de Sistemas de Informação",
       imagem:
-        "https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg",
-      time: times[1].nome,
-    },
-    {
-      nome: "GUILHERME LIMA",
-      cargo: "Desenvolvedor Python e JavaScript na Alura",
-      imagem:
-        "	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg",
-      time: times[1].nome,
-    },
-    {
-      nome: "PAULO SILVEIRA",
-      cargo: "Hipster e CEO da Alura",
-      imagem:
-        "https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg",
-      time: times[1].nome,
-    },
-    {
-      nome: "JULIANA AMOASEI",
-      cargo: "Desenvolvedora de software e instrutora",
-      imagem:
-        "https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg",
+        "https://github.com/thiagofeldner.png",
       time: times[2].nome,
     },
     {
-      nome: "DANIEL ARTINE",
-      cargo: "Engenheiro de Software na Stone Age",
+      nome: "THIAGO FELDNER",
+      cargo: "Programador de Sistemas de Informação",
       imagem:
-        "https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg",
-      time: times[2].nome,
-    },
-    {
-      nome: "GUILHERME LIMA",
-      cargo: "Desenvolvedor Python e JavaScript na Alura",
-      imagem:
-        "	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg",
-      time: times[2].nome,
-    },
-    {
-      nome: "PAULO SILVEIRA",
-      cargo: "Hipster e CEO da Alura",
-      imagem:
-        "https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg",
-      time: times[2].nome,
-    },
-    {
-      nome: "JULIANA AMOASEI",
-      cargo: "Desenvolvedora de software e instrutora",
-      imagem:
-        "https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg",
+        "https://github.com/thiagofeldner.png",
       time: times[3].nome,
     },
     {
@@ -220,6 +150,15 @@ function App() {
     console.log('Deletando colaborador')
   }
   
+  function mudarCorTime(cor, nome) {
+    setTimes(times.map(time => {
+      if(time.nome === nome) {
+        time.cor = cor;
+      }
+      return time
+    }));
+  }
+
   return (
     <div>
       <Banner />
@@ -237,6 +176,7 @@ function App() {
             colaboradores={colaboradores.filter(
             (colaborador) => colaborador.time === time.nome)}
             aoDeletar={deletarColaborador}
+            mudarCor = {mudarCorTime}
           />
         ))}
       </section>
