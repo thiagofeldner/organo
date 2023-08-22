@@ -51,8 +51,8 @@ function App() {
       favorito: false,
       nome: "THIAGO FELDNER",
       cargo: "Programador de Sistemas de Informação",
-      imagem:
-        "https://media.licdn.com/dms/image/C5603AQH_jTcMKYkT6w/profile-displayphoto-shrink_100_100/0/1588773535219?e=1698278400&v=beta&t=y2PXoEaSq1PQDX6rad-SQJ7e31veJKfwMYyGGTowgd8",
+      imagem:"https://media.licdn.com/dms/image/C5603AQH_jTcMKYkT6w/profile-displayphoto-shrink_100_100/0/1588773535219?e=1698278400&v=beta&t=y2PXoEaSq1PQDX6rad-SQJ7e31veJKfwMYyGGTowgd8",
+      linkedln: "https://www.linkedin.com/in/thiago-feldner/",
       time: times[0].nome,
     },
     {
@@ -60,8 +60,8 @@ function App() {
       favorito: false,
       nome: "THIAGO FELDNER",
       cargo: "Programador de Sistemas de Informação",
-      imagem:
-        "https://github.com/thiagofeldner.png",
+      imagem: "https://github.com/thiagofeldner.png",
+      linkedln: "https://www.linkedin.com/in/thiago-feldner/",
       time: times[1].nome,
     },
     {

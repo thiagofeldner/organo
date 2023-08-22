@@ -38,6 +38,19 @@
   padding: 0 16px;
 }
 
+.link {
+  font-size: 18px;
+  line-height: 20px;
+  padding: 0 16px;
+  margin-top: 8px;
+}
+
+.link a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #6278f7;
+}
+
 .deletar {
   position: absolute;
   right: -10px;

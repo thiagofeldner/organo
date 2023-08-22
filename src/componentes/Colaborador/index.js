@@ -24,6 +24,7 @@ const Colaborador = ({ colaborador, corDeFundo, aoDeletar, aoFavoritar }) => {
       <div className="rodape">
         <h4>{colaborador.nome}</h4>
         <h5>{colaborador.cargo}</h5>
+        <div className='link'><a href='https://www.linkedin.com/in/thiago-feldner/' target='blank'>Linkedin</a></div>
         <div className='favoritar'>
           {colaborador.favorito 
             ? <AiFillHeart {...propsFavorito} color='#FF0000' /> 

@@ -8,17 +8,19 @@ const Formulario = ({ aoCadastrar, times, cadastrarTime }) => {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
+  const [linkedin, setLinkedin] = useState("");
   const [time, setTime] = useState("");
   const [nomeTime, setNomeTime] = useState("");
   const [corTime, setCorTime] = useState("");
 
   const aoSubmeter = (evento) => {
     evento.preventDefault();
-    console.log("form enviado", nome, cargo, imagem, time);
+    console.log("form enviado", nome, cargo, imagem, time, linkedin);
     aoCadastrar({
       nome,
       cargo,
       imagem,
+      linkedin,
       time,
     });
   };
@@ -30,21 +32,27 @@ const Formulario = ({ aoCadastrar, times, cadastrarTime }) => {
         <Campo
           obrigatorio
           label="Nome"
-          placeholder="Digite seu nome "
+          placeholder="Digite seu nome"
           valor={nome}
           aoAlterado={(valor) => setNome(valor)}
         />
         <Campo
           obrigatorio
           label="Cargo"
-          placeholder="Digite seu cargo "
+          placeholder="Digite seu cargo"
           valor={cargo}
           aoAlterado={(valor) => setCargo(valor)}
         />
         <Campo
           label="Imagem"
-          placeholder="Informe o endereço da imagem "
+          placeholder="Informe o endereço da imagem"
           aoAlterado={(valor) => setImagem(valor)}
+        />
+        <Campo
+          label="Linkedin"
+          placeholder="Informe o endereço do linkedin"
+          valor={linkedin}
+          aoAlterado={(valor) => setLinkedin(valor)}
         />
         <ListaSuspensa
           obrigatorio
